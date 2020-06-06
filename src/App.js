@@ -5,9 +5,36 @@ import Table from "./Table";
 import SkillsList from "./SkillsList";
 
 import tloTestImage from "./assets/ffxivExamplePic.png";
+import GenericList from "./GenericList";
+
+//npm run start
+//npm run build
 
 class App extends Component {
     render() {
+        var listOfKeyValuePairs = [
+            {
+                name: "Dr. Pepper",
+                description: "Rating of 9",
+            },
+            {
+                name: "Coke",
+                description: "Rating of 6",
+            },
+            {
+                name: "Sprite",
+                description: "Rating of 7",
+            },
+            {
+                name: "Pepsi",
+                description: "Rating of 5",
+            },
+            {
+                name: "Moutain Dew",
+                description: "Rating of 7",
+            },
+        ];
+
         return (
             <div className="App">
                 <div className="row">
@@ -18,8 +45,14 @@ class App extends Component {
                     </div>
                 </div>
                 <div className="row pt-4">
-                    <div className="col-md-4 offset-md-2">
+                    <div className="col-md-2 offset-md-3">
                         <SkillsList />
+                    </div>
+                    <div className="col-md-2 offset-md-2">
+                        <GenericList
+                            listTitle="Drinks"
+                            listArray={listOfKeyValuePairs}
+                        />
                     </div>
                 </div>
             </div>
