@@ -26,7 +26,7 @@ class SkillsList extends Component {
         ];
 
         return (
-            <ul className="list-group list-group-flush">
+            <ul className="list-group">
                 <li className="list-group-item font-weight-bold h2">Skills</li>
                 {listOfSkills.map(function (skill, index) {
                     return (

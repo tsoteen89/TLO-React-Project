@@ -6,6 +6,7 @@ import SkillsList from "./SkillsList";
 
 import tloTestImage from "./assets/ffxivExamplePic.png";
 import GenericList from "./GenericList";
+import NameDraw from "./NameDraw";
 
 //npm run start
 //npm run build
@@ -45,14 +46,25 @@ class App extends Component {
                     </div>
                 </div>
                 <div className="row pt-4">
-                    <div className="col-md-2 offset-md-3">
-                        <SkillsList />
+                    <div className="col-md-2 offset-md-3 ">
+                        <div className="container">
+                            <SkillsList />
+                        </div>
                     </div>
                     <div className="col-md-2 offset-md-2">
-                        <GenericList
-                            listTitle="Drinks"
-                            listArray={listOfKeyValuePairs}
-                        />
+                        <div className="container">
+                            <GenericList
+                                listTitle="Drinks"
+                                listArray={listOfKeyValuePairs}
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div className="row pt-4">
+                    <div className="col-md-2 offset-md-7">
+                        <div class="container">
+                            <NameDraw nameList={listOfKeyValuePairs} />
+                        </div>
                     </div>
                 </div>
             </div>
